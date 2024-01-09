@@ -1,5 +1,11 @@
-![](https://raw.githubusercontent.com/0xM1gu3l/OpenAI-Threads-Lister/master/assets/icon.png)
 # OpenAI Thread Lister
+![](https://raw.githubusercontent.com/0xM1gu3l/OpenAI-Threads-Lister/master/assets/icon.png)  
+
+
+![](https://img.shields.io/chrome-web-store/v/cjmalnnjlimlnmhpincimnjienkgmhjk?style=for-the-badge)
+![](https://img.shields.io/chrome-web-store/users/cjmalnnjlimlnmhpincimnjienkgmhjk?style=for-the-badge)
+![](https://img.shields.io/chrome-web-store/rating/cjmalnnjlimlnmhpincimnjienkgmhjk?style=for-the-badge)
+
 
 A Simple Plasmo Extension that shows all of your conversations in the ```https://platform.openai.com/playgroud``` Assistants.
 
