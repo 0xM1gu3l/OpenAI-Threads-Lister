@@ -2,6 +2,9 @@
 
 A Simple Plasmo Extension that shows all of your conversations in the ```https://platform.openai.com/playgroud``` Assistants.
 
+# Download
+This extension is available at Chrome WebStore!  
+https://chromewebstore.google.com/detail/openai-thread-lister/cjmalnnjlimlnmhpincimnjienkgmhjk
 ## First Time Setup:
 
 You need to get your ```sess-``` token from the ```https://platform.openai.com/``` website  
