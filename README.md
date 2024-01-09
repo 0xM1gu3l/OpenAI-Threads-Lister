@@ -10,7 +10,7 @@ https://chromewebstore.google.com/detail/openai-thread-lister/cjmalnnjlimlnmhpin
 You need to get your ```sess-``` token from the ```https://platform.openai.com/``` website  
 Luckly for you, I have a script that automatically fetches the token for you.
 
-Copy and paste this into the browser console (Note that you need to be logged in to get the "sess-" token):
+Copy and paste this into the browser console while in the platform.openai.com website (Note that you need to be logged in to get the "sess-" token):
 ```js
 const key = Object.keys(window.localStorage).filter((function(e) {
         return e.startsWith("@@auth0spajs@@")
