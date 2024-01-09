@@ -1,3 +1,4 @@
+![](https://raw.githubusercontent.com/0xM1gu3l/OpenAI-Threads-Lister/master/assets/icon.png)
 # OpenAI Thread Lister
 
 A Simple Plasmo Extension that shows all of your conversations in the ```https://platform.openai.com/playgroud``` Assistants.
