@@ -1,33 +1,44 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+# OpenAI Thread Lister
 
-## Getting Started
+A Simple Plasmo Extension that shows all of your conversations in the ```https://platform.openai.com/playgroud``` Assistants.
 
-First, run the development server:
+## First Time Setup:
 
-```bash
-pnpm dev
-# or
-npm run dev
+You need to get your ```sess-``` token from the ```https://platform.openai.com/``` website  
+Luckly for you, I have a script that automatically fetches the token for you.
+
+Copy and paste this into the browser console (Note that you need to be logged in to get the "sess-" token):
+```js
+const key = Object.keys(window.localStorage).filter((function(e) {
+        return e.startsWith("@@auth0spajs@@")
+    }
+))
+const token = JSON.parse(localStorage.getItem(key[0])).body.access_token
+
+const options = {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${token}`
+  },
+  body: {}
+};
+
+fetch("https://api.openai.com/dashboard/onboarding/login", options)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Handle the response data here
+    console.log("Your session token is: " + data.user.session.sensitive_id);
+  })
 ```
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
+This should return your session token in the console.
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
+After that, you click in the extension and input the session token. Don't worry, it just saves it to the localStorage!
 
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
-
-## Making production build
-
-Run the following:
-
-```bash
-pnpm build
-# or
-npm run build
-```
-
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
-
-## Submit to the webstores
-
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+Then you can start using it! Enjoy!
