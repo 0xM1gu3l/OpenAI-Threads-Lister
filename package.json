@@ -1,7 +1,7 @@
 {
-  "name": "openai-threads-lister",
-  "displayName": "OpenAI Threads Lister",
-  "version": "0.0.1",
+  "name": "openai-thread-lister",
+  "displayName": "OpenAI Thread Lister",
+  "version": "0.0.2",
   "description": "A OpenAI Thread Lister for platform.openai.com",
   "author": "0xM1gu3l",
   "scripts": {
@@ -27,7 +27,7 @@
   },
   "manifest": {
     "host_permissions": [
-      "https://*/*"
+      "https://api.openai.com/*"
     ]
   }
 }
